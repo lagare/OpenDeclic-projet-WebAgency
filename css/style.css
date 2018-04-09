@@ -86,18 +86,11 @@ img {
     height: auto;
 }
 
-
-
-
-/* content */
-
 .container {
     margin: 0 auto;
     padding: 0;
     width: 95%;
 }
-
-
 
 
 /*--------------------------------------------------------------------*/
@@ -140,7 +133,7 @@ section {
     overflow: hidden;
 }
 
-section h1, section h3 {
+section h2, section h3 {
     font-family: 'Roboto-Bold', 'Open Sans', sans-serif;
     color: #272727;
 }
@@ -200,7 +193,7 @@ section h1, section h3 {
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     position: fixed;
     top: 0;
-    min-height: 76px;
+    /*min-height: 76px;*/
     width: 100%;
     z-index: 3;
     padding: 0 1em;
@@ -228,6 +221,8 @@ section h1, section h3 {
     text-decoration: none;
 }
 
+
+
 .header li a:hover,
 .header .menu-btn:hover {
     background-color: #f4f4f4;
@@ -242,7 +237,8 @@ header .activepage a {
 .header .logo {
     display: block;
     float: left;
-    margin: 0.5em;
+    margin: 1em 0;
+    max-width: 150px;
 }
 
 /* menu */
@@ -262,7 +258,7 @@ header .activepage a {
     padding: 28px 20px;
     position: relative;
     user-select: none;
-    margin: 1em 0;
+    margin: 0;
 }
 
 /*-----Hamburger-----*/
@@ -272,7 +268,6 @@ header .activepage a {
     display: block;
     height: 4px;
     position: relative;
-    transition: background .2s ease-out;
     width: 24px;
 }
 
@@ -302,17 +297,18 @@ header .activepage a {
 }
 
 .header .menu-btn:checked ~ .menu {
+    transition: all .2s ease-out;
   max-height: 240px;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon,
-.header .menu-btn:checked ~ .menu-icon .navicon:before,
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-    background: #333;
+.header .menu-btn:checked ~ .menu-icon .hamburger,
+.header .menu-btn:checked ~ .menu-icon .hamburger:before,
+.header .menu-btn:checked ~ .menu-icon .hamburger:after {
+    background: #777777;
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .hamburger:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .hamburger:after {
     top: 0;
 }
 
@@ -321,7 +317,7 @@ header .activepage a {
 /*-----------Home/Slider-----------*/
 
 #home {
-    margin-top: 76px;
+    margin-top: 65px;
     min-height: 300px;
     height: 50%;
 }
@@ -340,12 +336,26 @@ header .activepage a {
 
 .arrow,
 .title {
-  width: 100%;
+  /*width: 100%;*/
     height: 100%;
     border-bottom: 6px solid rgba(10, 10, 10, 0.4);
 }
 
-@media only screen and (min-width: 992px) {
+/*@media only screen and (min-width: 992px) {*/
+  
+  .arrow {
+    width: calc(100% / 14);
+  }
+    
+  .title {
+    width: calc(100% / 14 * 12);
+  }
+  .column {
+    float: left;
+  }
+/*}*/
+
+@media only screen and (min-width: 992px) {*/
   
   .arrow {
     width: calc(100% / 12);
@@ -354,9 +364,7 @@ header .activepage a {
   .title {
     width: calc(100% / 12 * 10);
   }
-  .column {
-    float: left;
-  }
+  
 }
 
 .slider {
@@ -369,37 +377,50 @@ header .activepage a {
 
 .prev, .next {
     cursor: pointer;
-    height: 90px;
-    width: 55px;
-    font-size: 45px;
+    height: 40px;
+    width: 25px;
+    font-size: 25px;
     color: white;
-    background: rgba(10, 10, 10, 0.4);
+    background: rgba(10, 10, 10, 0.2);
     border: none;
+    outline: none;
+    
+    -webkit-transition: background 0.2s ease-out;
+    -moz-transition: background 0.2s ease-out;
+    -o-transition: background 0.2s ease-out;
+    transition: background 0.2s ease-out;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(10, 10, 10, 0.8);
 }
 
 .prev {
-    border-bottom-right-radius: 90px;
-    border-top-right-radius: 90px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .next {
-    border-top-left-radius: 90px;
-    border-bottom-left-radius: 90px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 
+.active-slide {
+    border-bottom-color: #5cadd3;
+}
 
 
 .arrow:first-child {
     text-align: left;
-    border-bottom-color: #5cadd3;
+    
 }
 
 .arrow:last-child {
     text-align: right;
 }
 .arrow {
-    display: none;
+    /*display: none;*/
 }
 
 .title {
@@ -677,9 +698,16 @@ form-title {
 
 @media screen and (min-width: 768px) {
   
+    .header .logo {
+        max-width: none;
+    }
     
+    .header .menu-icon {
+        margin: 1em 0;
+    }
+
     
-    .sectionHeader h1 {
+    .sectionHeader h2 {
         font-size: xx-large;
     }
     
@@ -688,6 +716,73 @@ form-title {
         min-height: 400px;
         
     }
+    
+    /*-----------flechete slider-----------*/
+    
+        .arrow,
+    .title {
+      /*width: 100%;*/
+        height: 100%;
+        border-bottom: 6px solid rgba(10, 10, 10, 0.4);
+    }
+
+    /*@media only screen and (min-width: 992px) {*/
+
+      .arrow {
+        width: calc(100% / 12);
+      }
+
+      .title {
+        width: calc(100% / 12 * 10);
+      }
+      .column {
+        float: left;
+      }
+    /*}*/
+
+    .slider {
+        height: 100%;
+        background-image: url("../images/slider/bg1.jpg");
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        height: 90px;
+        width: 55px;
+        font-size: 45px;
+        color: white;
+        background: rgba(10, 10, 10, 0.4);
+        border: none;
+    }
+
+    .prev {
+        border-bottom-right-radius: 90px;
+        border-top-right-radius: 90px;
+    }
+
+    .next {
+        border-top-left-radius: 90px;
+        border-bottom-left-radius: 90px;
+    }
+
+
+
+
+    .arrow:first-child {
+        text-align: left;
+        border-bottom-color: #5cadd3;
+    }
+
+    .arrow:last-child {
+        text-align: right;
+    }
+    .arrow {
+        /*display: none;*/
+    }
+    /*---------------------------*/
     
     #services li {
         display: flex;
@@ -851,6 +946,10 @@ form-title {
         border-top-color: #5cadd3;
     }
     
+    .header li:hover {
+        border-top-color: #5999b7;
+    }
+
     .arrow {
         display: inherit;
     }
@@ -918,7 +1017,7 @@ form-title {
     footer iframe {
         height: 100%;
         opacity: 0.7 !important;
-        filter: alpha(opacity=70); /* For IE8 and earlier */
+        filter: alpha(opacity=70); 
         z-index: 1;
     }
     
