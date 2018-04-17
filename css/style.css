@@ -1029,7 +1029,6 @@ form-title {
 
 @media screen and (min-width: 1200px) {
   
-    
     #home {
         margin-top: 108px;
         min-height: 700px;
@@ -1046,10 +1045,6 @@ form-title {
     
     .header .menu {
         height: 108px;
-    }
-    
-    section {
-        height: 100%;
     }
     
 }
