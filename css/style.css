@@ -92,6 +92,12 @@ img {
     width: 95%;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .fa {
     font-family: 'FontAwesome';
     font-style: normal;
@@ -125,6 +131,8 @@ section {
     font-family: 'Roboto-Regular', 'Open Sans', sans-serif;
     color: #64686d;
     overflow: hidden;
+    padding: 108px 0;
+    padding-top: 65px;
 }
 
 section h2, section h3 {
@@ -186,7 +194,7 @@ section h2, section h3 {
     top: 0;
     width: 100%;
     z-index: 3;
-    padding: 0 1em;
+    padding: 0 2em;
 }
 
 .header ul {
@@ -243,7 +251,6 @@ header .activepage a {
 
 .header .menu-icon {
     cursor: pointer;
-    display: inline-block;
     float: right;
     padding: 28px 20px;
     position: relative;
@@ -307,9 +314,7 @@ header .activepage a {
 /*-----------Home/Slider-----------*/
 
 #home {
-    margin-top: 65px;
-    min-height: 300px;
-    height: 50%;
+    border-bottom: 1px solid #f5f5f5;
 }
 
 .column {
@@ -341,19 +346,29 @@ header .activepage a {
     float: left;
 }
 
-@media only screen and (min-width: 992px) {*/
+/*@media only screen and (min-width: 992px) {
   
   
   
-}
+}*/
 
-.slider {
-    height: 100%;
+#slider {
+
     background-image: url("../images/slider/bg1.jpg");
     background-size: cover;
     background-position: center;
+
+    margin: 0 auto;
+
+    max-width: 100%;
+    text-align: center;
+
+    height: 75vh;
     
 }
+
+
+
 
 .prev, .next {
     cursor: pointer;
@@ -399,9 +414,7 @@ header .activepage a {
 .arrow:last-child {
     text-align: right;
 }
-.arrow {
-    /*display: none;*/
-}
+
 
 .title {
     font-family: 'Roboto-Bold', 'Open Sans', sans-serif;
@@ -501,10 +514,6 @@ ul {
     background-color: #f5f5f5;
 }
 
-#Portofolio {
-    padding-bottom: 2em;
-}
-
 figure, #selection button {
     max-width: 380px;
     max-height: 233.33px;
@@ -512,13 +521,10 @@ figure, #selection button {
 }
 
 
-
-
 #selection {
     width: 100%;
     margin: 2.5em auto;
 }
-
 
 
 #selection button {
@@ -613,7 +619,18 @@ figcaption .icon {
 /*----------------------------------*/
 
 
+
+
 /*---------iframe--------*/
+
+form {
+    padding: 4em 0;
+    padding-bottom: 8em;
+
+    -webkit-box-shadow: inset 0px -10px 10px -13px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px -10px 10px -13px rgba(0,0,0,0.5);
+    box-shadow: inset 0px -10px 10px -13px rgba(0,0,0,0.5);
+}
 
 iframe {
     width: 100%;
@@ -653,8 +670,7 @@ input[type=submit] {
     color: #64686d;
 }
 
-form-title {
-    
+.form-title {
     color: #272727;
 }
 
@@ -690,11 +706,10 @@ form-title {
     .sectionHeader h2 {
         font-size: xx-large;
     }
-    
-    #home {
-        margin-top: 86px;
-        min-height: 400px;
-        
+
+    section {
+        min-height: 100vh;
+        padding-top: 96px;
     }
     
     /*-----------arrow slider-----------*/
@@ -714,14 +729,6 @@ form-title {
     }
     .column {
         float: left;
-    }
-
-    .slider {
-        height: 100%;
-        background-image: url("../images/slider/bg1.jpg");
-        background-size: cover;
-        background-position: center;
-
     }
 
     .prev, .next {
@@ -837,11 +844,6 @@ form-title {
     /*-------------------------------------*/
     
     
-    
-    .li-logo {
-        /*padding: 1em 0;*/
-    }
-    
     .li-logo .icon {
         margin: 1em 2em;
     }
@@ -852,10 +854,11 @@ form-title {
     
     .header {
         min-height: 86px;
+        padding: 0 4em;
     }
     
     .header .logo {
-        margin: 0.8em 0;
+        margin: 1.2em 0;
     }
     
     
@@ -865,18 +868,13 @@ form-title {
 
 @media screen and (min-width: 992px) {
     
-    #home {
-        margin-top: 100px;
-        padding-bottom: 75px;
-        min-height: 558px;
-    }
   
     .header {
-        padding: 0 3em;
+        padding: 0 5.5em;
     }
     
     .header .logo {
-        margin: 1em 0;
+        margin: 1.5em 0;
     }
     
     .header li {
@@ -917,6 +915,10 @@ form-title {
     .header li:hover {
         border-top-color: #5999b7;
     }
+
+    section {
+        padding-top: 108px;
+    }
     
     .arrow {
         width: calc(100% / 12);
@@ -940,6 +942,12 @@ form-title {
         width: 400px;
     }
 
+    #Portofolio {
+        -webkit-box-shadow: inset 0px -10px 10px -13px rgba(0,0,0,0.5);
+        -moz-box-shadow: inset 0px -10px 10px -13px rgba(0,0,0,0.5);
+        box-shadow: inset 0px -10px 10px -13px rgba(0,0,0,0.5);
+    }
+
     footer {
         position: relative;
         height: 600px;
@@ -956,8 +964,12 @@ form-title {
         flex-direction: column;
         position: absolute;
         padding: 2px;
-        background: rgba(250, 250, 250, 0.8);
+        background: rgba(250, 250, 250, 0.95);
         z-index: 2;
+
+        -webkit-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.46);
+        -moz-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.46);
+        box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.46);
     }
     
     input[type=text], textarea {
@@ -989,8 +1001,7 @@ form-title {
     
     footer iframe {
         height: 100%;
-        opacity: 0.7 !important;
-        filter: alpha(opacity=70); 
+        opacity: 0.8 !important;
         z-index: 1;
     }
     
@@ -1002,15 +1013,6 @@ form-title {
 
 @media screen and (min-width: 1200px) {
   
-    #home {
-        margin-top: 108px;
-        min-height: 700px;
-        height: 90%;
-    }
-    
-    .header {
-        padding: 0 8em;
-    }
     
     .header .logo {
         margin: 1.25em 0;
