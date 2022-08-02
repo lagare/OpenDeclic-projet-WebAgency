@@ -1,0 +1,12 @@
+section {
+    padding: $nav-height 0 0 0;
+
+    @include responsive(tab-land) {
+        padding: $nav-height 6rem 0 6rem;
+    }
+
+    @include responsive(tab-port) {
+        padding: $nav-height 3rem 0 3ren;
+    }
+
+}

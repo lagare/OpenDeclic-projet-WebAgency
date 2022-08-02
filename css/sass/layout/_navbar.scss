@@ -1,0 +1,230 @@
+.navbar {
+    background-color: $color-white;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: $nav-height;
+    min-height: $nav-height-small;
+
+    transition: all .2s ease-in-out;
+
+    @include responsive(phone) {
+        height: $nav-height-small;
+    }
+
+    &-content {
+        min-width: 350px;
+        width: 80%;
+        height: 100%;
+        margin: auto;
+    }
+
+    &--shrinked {
+        height: $nav-height-small;
+        background-color: $color-white-2;
+        border-bottom: $color-white-4;
+
+        & .navbar__menu-list {
+
+            @include responsive(tab-land) {
+                height: calc(100vh - #{$nav-height-small}) !important;
+                top: $nav-height-small !important;
+            }
+        }
+    }
+
+    &__hamburger {
+        
+        display: none;
+        cursor: pointer;
+        padding: 2.5rem 1.8rem;
+        
+        &__icon {
+            position: relative;
+            display: block;
+            width: 5rem;
+            height: .6rem;
+            background: $color-white-4;
+            border-radius: 1px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .2s ease-in-out;
+
+            &::before,
+            &::after {
+                @extend .navbar__hamburger__icon;
+                content: '';
+                position: absolute;
+            }
+
+            &::before {
+                transform: translateY(-1.6rem);
+            }
+
+            &::after {
+                transform: translateY(1.6rem);
+            }
+        }
+
+        &:hover .navbar__hamburger__icon {
+
+            
+            background-color: $color-primary-dark;
+        }
+
+        
+
+        @include responsive(tab-land) {
+            display: block;
+        }
+
+        &__input {
+
+            display: none;
+
+            @include responsive(tab-land) {
+                z-index: 105;
+            }
+
+            &:checked ~ .navbar__hamburger .navbar__hamburger__icon {
+
+                background: $color-primary;
+
+                &::before,
+                &::after {
+                    transform: translateY(0);
+                }
+                
+                @include responsive(tab-land) {
+                    left: 0;
+                }
+
+            }
+
+            &:checked ~ .navbar__menu-list {
+                
+                @include responsive(tab-land) {
+                    left: 0;
+                }
+
+            }
+        }
+    }
+
+    &__menu-list {
+        
+        height: 100%;
+        transition: left .5s;
+        display: flex;
+
+        @include responsive(tab-land) {
+            position: fixed;
+            width: 100%;
+            height: calc(100vh - #{$nav-height});
+            background-color: $color-white-2;
+            display: flex;
+            top: $nav-height;
+            left: -100%;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        @include responsive(phone) {
+            height: calc(100vh - $nav-height-small);
+            top: $nav-height-small;
+        }
+
+        &__item {
+            border-top: 5px solid transparent;
+            list-style: none;
+            align-items: center;
+            display: flex;
+            /* extends flex align center */
+            padding: 0 2rem;
+
+            @include responsive(tab-land) {
+                margin-top: 4.5rem;
+            }
+            
+
+            .navbar-link:link,
+            .navbar-link:visited {
+                font-size: $default-font-size;
+                text-decoration: none;
+                color: $text-color-2;
+                transition: color .3s ease;
+
+                &:hover {
+                    color: $color-primary;
+                }
+
+                @include responsive(tab-land) {
+                   font-size: 3rem;
+                   
+                }
+            }
+
+            &--active {
+                border-top: 5px solid $color-primary;
+                position: relative;
+
+                @include responsive(tab-land) {
+                    border-top: none;
+                    font-weight: 800;
+                }
+
+                &::before,
+                &::after {
+                    @include responsive(tab-land) {
+                       content: "";
+                       width: 1rem;
+                       height: 1rem;
+                       background-color: $color-primary;
+                       margin: 0 1.5rem;
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+
+
+.nav {
+
+    height: $nav-height;
+    border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    background: $color-white;
+
+    &__list {
+        list-style: none;
+        height: 100%;
+
+        &-item {
+            width: 10rem;
+            justify-content: center;
+            border-top: 5px solid transparent;
+
+            .hamburger-link:link,
+            .hamburger-link:visited {
+                font-size: $default-font-size;
+                text-decoration: none;
+                color: $text-color-2;
+            }
+        }
+
+        &-link:link,
+        &-link:visited {
+            font-size: $default-font-size;
+            text-decoration: none;
+            color: $text-color-2;
+        }
+
+        .active {
+            border-top: 5px solid $color-primary;
+        }
+    }
+}

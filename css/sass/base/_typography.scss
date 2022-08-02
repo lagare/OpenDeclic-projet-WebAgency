@@ -1,0 +1,76 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $color-black-light;
+}
+.bold-font {
+    font-weight: bold;
+}
+
+.header__slider {
+    color: whitesmoke;
+}
+
+.header__title {
+
+    font-weight: 800;
+    line-height: 1;
+    color: $color-white-2;
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+
+    &--blue {
+        color: $color-primary;
+    }
+
+    &--sub {
+        font-size: 1.6rem;
+        line-height: 1;
+    }
+
+
+}
+
+.section__header {
+    text-align: center;
+    font-size: 2rem;
+    width: 70%;
+    margin: 4.5rem auto;
+
+    @include responsive(tab-land) {
+        margin: 3rem auto;
+    }
+
+    @include responsive(tab-port) {
+        width: 95%;
+    }
+
+    &-title {
+        font-weight: 700;
+        color: $color-black-light;
+        text-transform: uppercase;
+
+        &-underline {
+            background-color: $color-white-3;
+            height: 2px;
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            width: 25%;
+
+            .dot {
+                height: 2.3rem;
+                width: 2.3rem;
+                background-color: $color-primary;
+                border: 4px solid $color-white;
+                border-radius: 50%;
+                display: inline-block;
+                @include absoluteCenter; 
+            }
+        }
+
+        
+    }
+}

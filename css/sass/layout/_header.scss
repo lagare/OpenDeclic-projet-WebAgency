@@ -1,0 +1,25 @@
+.header {
+    height: 100vh;
+    background: $color-white;
+    padding-top: $nav-height;
+
+    &__slider {
+        height: 85%;
+        background: turquoise;
+    }
+
+    &__text-frame {
+        width: 80%;
+
+        @include responsive(tab-land) {
+            width: 65%; 
+        }
+    
+        @include responsive(tab-port) {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+        }
+    
+    }
+}

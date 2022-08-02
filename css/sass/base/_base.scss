@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This define what 1rem is - ( basic 10 px )
+    /* for overall setting */
+    font-size: 62.5%; // 1 rem = 10px; 10px/16 = 62.5%
+    scroll-behavior: smooth;
+
+    @include responsive(tab-land) {
+        font-size: 56.25%; // 1 rem = 9px, 9/16 
+    }
+
+    @include responsive(tab-port) {
+        font-size: 50%; // 1 rem = 8px, 8/16 
+    }
+
+    @include responsive(big-desktop) {
+        font-size: 75%; // 1 rem = 12px, 12/16 
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: $default-font-family;
+    font-size: $default-font-size;
+    color: $text-color;
+    
+    @include responsive(tab-port) {
+        padding: 0;
+    }
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}

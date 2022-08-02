@@ -1,0 +1,33 @@
+.wrapper {
+    max-width: $grid-width;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: $gap-small;
+
+    @include responsive(big-desktop) {
+        max-width: 120rem;
+    }
+
+    @include responsive(tab-land) {
+        grid-gap: $gap-medium;
+    }
+
+    @include responsive(tab-port) {
+        grid-template-columns: 1fr !important;
+        max-width: 50rem;
+    }
+}
+
+.wrap-half {
+    @extend .wrapper;
+    grid-template-columns: 1fr 1fr;
+}
+
+.wrap-quarter {
+    @extend .wrapper;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @include responsive(tab-land) {
+        grid-template-columns: 1fr 1fr;
+    }
+}

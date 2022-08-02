@@ -1,0 +1,119 @@
+.btn,
+.btn:link,
+.btn:visited,
+.btn:active,
+.btn:focus {
+    border-color: transparent;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn--blue {
+    display: inline-block;
+    font-weight: 700;
+    padding: 1.2rem;
+    color: $color-white;
+    border-radius: 4px;
+    background: $color-primary;
+    border: none;
+    border-bottom: 3px solid $color-primary-dark;
+    -webkit-transition: background 0.5s ease-out;
+    -moz-transition: background 0.5s ease-out;
+    -o-transition: background 0.5s ease-out;
+    transition: background 0.5s ease-out;
+}
+
+.portofolio__projects-types {
+    &-nav {
+        @include clearfix;
+        margin: 0 auto;
+        max-width: 50rem;
+        margin-bottom: 5rem;
+
+        @include responsive(tab-port) {
+            display: block !important;
+        }
+
+        &__selector,
+        &__selector:active,
+        &__selector:focus {
+            font-weight: 700;
+            padding: 1rem 2rem;
+            border-bottom: 6px solid transparent;
+            
+            background: $color-white-3;
+            color: $text-color-2;
+            text-align: center;
+
+            transition: all .2s ease-out;
+
+            @include responsive(tab-port) {
+                display: block !important;
+                width: 100%;
+            }
+
+            &:hover:not(.--active) {
+                background-color: darken($color-white-4, 5%);
+            }
+
+            &:active:not(.--active) {
+                background-color: $color-primary-dark;
+                color: $text-color;
+            }
+
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+
+                @include responsive(tab-port) {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+
+            &:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+
+                @include responsive(tab-port) {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+        }
+
+        .--active {
+            background-color: $color-primary;
+            color: $color-white-3;
+            position: relative;
+            border-bottom: 6px solid $color-primary-dark;
+
+            &::after {
+                content: "";
+                width: 1.5rem;
+                height: 1.5rem;
+                position: absolute;
+                bottom: -1.5rem;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 0;
+                height: 0;
+                border-top: solid 1.2rem $color-primary-dark;
+                border-left: solid 1.2rem transparent;
+                border-right: solid 1.2rem transparent;
+
+                @include responsive(tab-port) {
+                    display: none;
+                }
+            }
+
+        }
+
+
+    }
+
+    
+}

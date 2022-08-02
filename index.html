@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    
     <meta charset="utf-8">
-    
     
     <title>WebAgency Paris</title>
     <meta name="description" content="Agence Web basée sur Paris, specialisée dans la conception de sites et applications web, ux/UI design et referencement SEO." />
@@ -25,302 +23,260 @@
     <meta property="og:site_name" content="WebAgency" />
     <meta property="fb:admins" content="Facebook numeric ID" />
     
-    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script src="scripts/scripts.js" defer></script>
 
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-content flex-spaced-between">
+            <div class="navbar__brand">
+                <img class="navbar__brand__logo" src="assets/images/logo.png" alt="logo">
+            </div>
+            
+            <input type="checkbox" name="hamburger" id="hamburger" class="navbar__hamburger__input">
+            <label for="hamburger" class="navbar__hamburger">
+                <span class="navbar__hamburger__icon"></span>
+            </label>
+            <ul class="navbar__menu-list">
+                <li class="navbar__menu-list__item navbar__menu-list__item--active"><a href="#home" class="navbar-link">Accueil</a></li>
+                <li class="navbar__menu-list__item"><a href="#services" class="navbar-link">Services</a></li>
+                <li class="navbar__menu-list__item"><a href="#portofolio" class="navbar-link">Portofolio</a></li>
+                <li class="navbar__menu-list__item"><a href="#contact" class="navbar-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
   
     
-    <header class="header">
-      <img class="logo" src="images/logo.png" alt="logo">
-      
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-              <label class="menu-icon" for="menu-btn"><span class="hamburger"></span></label>
-            <ul class="menu">
-                <li class="activepage"><a href="#work">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#Portofolio">Portofolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-        
+    <header id="home" class="header">
+      <div class="header__slider">
+
+        <div class="header__slider__slides">
+            <div class="header__slider__slides__item"></div>
+            <div class="header__slider__slides__item"></div>
+        </div>
+
+        <div class="header__slider__panel">
+            <div class="header__slider__panel__nav active">
+                <div class="half-circle-left">
+                    <button class="btn header__slider__panel__button --first">
+                        <i class="fa fa-angle-left fa-3x" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="header__slider__panel__content">
+                <div class="header__text-frame">
+                    
+                    <h1 class="header__title">
+                        <span class="header__title--main"><strong class="header__title--blue">WebAgency</strong> : L'agence de tous vos projets ! <br></span>
+                        
+                        <span class="header__title--sub">Vous avez un projet ? La WebAgency vous aide a le realiser</span>
+                    </h1>
+                    <a href="#" class="btn btn--blue">Plus d'infos</a>
+                </div>
+            </div>
+            <div class="header__slider__panel__nav">
+                <div class="half-circle-right">
+                    <button class="btn header__slider__panel__button --last">
+                        <i class="fa fa-angle-right fa-3x" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+      </div>
     </header>
 
-    
-    
-    
-    <section id="home" class="">
-
-        
-
-
-        <div id="slider" class="row">
-            
-            <div class="arrow one-sixth column active-slide">
-                <button class="fa prev">&#xf104;</button>
-            </div>
-            
-            <div class="title four-sixths column">
-                
-                <div class="title-text">
-                    <h1><span class="lightblue">WEBAGENCY</span> : L'AGENCE DE TOUS VOS PROJETS !</h1>
-                    <p>Vous avez un projet web ? La WebAgency vous aide a le réaliser !</p>
-                    <button class="blue-btn">Plus d'infos</button>
-                </div>
-                
-            </div>
-            
-            <div class="arrow one-sixth column">
-                <button class="fa next">&#xf105;</button>
-            </div>
-            
-        </div>-
-    </section>
-    
-    <section id="services">
-        <div class="container">
-            
-            <div class="sectionHeader">
-                <h2>NOS SERVICES</h2>
-                <p class="Subtitle"><span class="dot"></span></p>
-                
-                <p>Nous accompagnons nos clients, dans leur démarches de developpement, a l'aides des prestations suivantes.</p>
-                
-            </div>
+    <section id="services" class="services-section">
+        <div class="section__header">
+            <h2 class="section__header-title">NOS SERVICES</h2>
+            <div class="section__header-title-underline u-margin-y-md"><span class="dot"></span></div>
+            <p>Nous accompagnons nos clients, dans leur démarches de developpement, a l'aides des prestations suivantes.</p>
+        </div>
+        <div class="services-area">
             
             <div class="service-img">
-                <img src="images/main-feature.png" alt="services">
+                <img src="assets/images/main-feature.png" alt="services">
             </div>
-            
+
             <div class="service-list">
-                <ul>
-                    
-                    <li>
-                        <div class="li-logo">
-                            <i class="fa icon">&#xf201;</i>
-                        </div>
-                        
-                        
-                        <div class="li-text">
-                            <h3>UX design</h3>
-                            <p>l'Ergonomie est un enjeu essentiel sur le Web, c'est pourquoi nous faisons en sorte de vous offrir l'experience utilisateur la plus simple, fluide et performante possible.</p>
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <div class="li-logo">
-                            <i class="fa icon">&#xf1b3;</i>
-                        </div>
-                        
-                        
-                        <div class="li-text">
-                            <h3>UI design</h3>
-                            <p>Nous etablissons un aspect visuel attractif et agréable pour l'utilisateur, qui correspond au mieux a votre image.</p>
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <div class="li-logo">
-                            <i class="fa icon">&#xf200;</i>
-                        </div>
-                        
-                        
-                        <div class="li-text">
-                            <h3>SEO</h3>
-                            <p>Toujours dans l'optique d'ameliorer votre visibilité, nous optimisons efficacement votre referencement web SEO, afin d'augmenter le trafic.</p>
-                        </div>
-                    </li>
-                    
-                </ul>
-            </div>
-            
-            
-        </div>
-    </section>
-    
-    <section id="Portofolio">
-        <div class="container">
-            
-            <div class="sectionHeader">
-                
-                <h2>NOS PROJETS</h2>
-                <p class="Subtitle"><span class="dot"></span></p>
-                <p>Voici une partie de nos réalisations pour nos clients.</p>
-                
-            </div>
-            
-            
-            <nav id="selection">
-                <button class="blue-btn activetype">All Works</button>
-                <button class="blue-btn">Creative</button>
-                <button class="blue-btn">Corporate</button>
-                <button class="blue-btn">Portofolio</button>
-            </nav>
-            
-            <a class="gallery-item" href="#">
-                        <figure>
-                            <img src="images/portfolio/01.jpg" alt="projet 1"/>
-                            <figcaption>
-                                
-                                <div class="caption-text">
-                                    <h4>Optix</h4>
-                                    <p>Opticien sur Paris.</p>
-                                </div>
-                                
-                                <i class="fa icon">&#xf06e;</i>
-                                
-                            </figcaption>
-                        </figure>
-                    </a>
-                    
-                    <a class="gallery-item" href="#">
-                        <figure>
-                            <img src="images/portfolio/02.jpg" alt="projet 2"/>
-                            <figcaption>
-                                
-                                <div class="caption-text">
-                                    <h4>Bunny's</h4>
-                                    <p>Prestataire en Evenementiel.</p>
-                                </div>
-                                
-                                <i class="fa icon">&#xf06e;</i>
-                                
-                            </figcaption>
-                        </figure>
-                    </a>
-                    
-                    <a class="gallery-item" href="#">
-                        <figure>
-                            <img src="images/portfolio/03.jpg" alt="projet 3"/>
-                            <figcaption>
-                                
-                                <div class="caption-text">
-                                    <h4>Original POMPADOUR</h4>
-                                    <p>Marque de vetement.</p>
-                                </div>
-                                
-                                <i class="fa icon">&#xf06e;</i>
-                                
-                            </figcaption>
-                        </figure>
-                    </a>
-                    
-                    <a class="gallery-item" href="#">
-                        <figure>
-                            <img src="images/portfolio/04.jpg" alt="projet 4"/>
-                            <figcaption>
-                                
-                                <div class="caption-text">
-                                    <h4>Builds</h4>
-                                    <p>Architecte d'interieur.</p>
-                                </div>
-                                
-                                <i class="fa icon">&#xf06e;</i>
-                                
-                            </figcaption>
-                        </figure>
-                    </a>
-                    
-                    <a class="gallery-item" href="#">
-                         <figure>
-                            <img src="images/portfolio/05.jpg" alt="projet 5"/>
-                            <figcaption>
-                                
-                                <div class="caption-text">
-                                    <h4>T-Shop</h4>
-                                    <p>Magasin de pret a porter.</p>
-                                </div>
-                                
-                                <i class="fa icon">&#xf06e;</i>
-                                
-                            </figcaption>
-                        </figure>
-                    </a>
-                    
-                    <a class="gallery-item" href="#">
-                        <figure>
-                            <img src="images/portfolio/06.jpg" alt="projet 6"/>
-                            <figcaption>
-                                
-                                <div class="caption-text">
-                                    <h4>tr-Vels</h4>
-                                    <p>Agence de voyage.</p>
-                                </div>
-                                
-                                <i class="fa icon">&#xf06e;</i>
-                                
-                            </figcaption>
-                        </figure>
-                    </a>
-                    
-                    <a class="gallery-item" href="#">
-                        <figure>
-                            <img src="images/portfolio/07.jpg" alt="projet 7"/>
-                            <figcaption>
-                                
-                                <div class="caption-text">
-                                    <h4>Propuls-R</h4>
-                                    <p>Audit Entreprise.</p>
-                                </div>
-                                
-                                <i class="fa icon">&#xf06e;</i>
-                                
-                            </figcaption>
-                        </figure>
-                    </a>
-                    
-                    <a class="gallery-item" href="#">
-                        <figure>
-                            <img src="images/portfolio/08.jpg" alt="projet 8"/>
-                            <figcaption>
-                                
-                                <div class="caption-text">
-                                    <h4>BE Theme</h4>
-                                    <p>Agence de communication.</p>
-                                </div>
-                                
-                                <i class="fa icon">&#xf06e;</i>
-                                
-                            </figcaption>
-                        </figure>
-                    </a>
-       
-   
-            
-        </div>
-    </section>
-    
-    <footer id="contact">
-        
-        <form>
-            <div class="container-form">
-                
-                <h3 class="form-title">Contact Info</h3>
-                
-                <div class="form-text">
-                    
-                    <p class="bold-font">WebAgency SAS</p>
-                    <p>25 Rue d'Hauteville 75010 Paris</p>
-                    <p>Tel: 01 02 03 04 05</p>
+
+                <div class="service__feature">
+                    <div class="service__feature-logo-frame">
+                        <i class="fa icon service__feature-logo-icon">&#xf201;</i>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="service__feature-text">
+                        <h3>UX design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, placeat?</p>
+                        <!-- <p>l'Ergonomie est un enjeu essentiel sur le Web, c'est pourquoi nous faisons en sorte de vous offrir l'experience utilisateur la plus simple, fluide et performante possible.</p>-->
+                    </div>
+                </div>
+                <div class="service__feature">
+                    <div class="service__feature-logo-frame">
+                        <i class="fa icon service__feature-logo-icon">&#xf1b3;</i>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="service__feature-text">
+                        <h3>UI design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sunt.</p>
+                        <!--<p>Nous etablissons un aspect visuel attractif et agréable pour l'utilisateur, qui correspond au mieux a votre image.</p>-->
+                    </div>
+                </div>
+                <div class="service__feature">
+                    <div class="service__feature-logo-frame">
+                        <i class="fa icon service__feature-logo-icon">&#xf200;</i>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="service__feature-text">
+                        <h3>SEO</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, earum!</p>
+                        <!--<p>Toujours dans l'optique d'ameliorer votre visibilité, nous optimisons efficacement votre referencement web SEO, afin d'augmenter le trafic.</p>-->
+                    </div>
                 </div>
                 
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Subject">
-                <textarea placeholder="Message"></textarea>
-                <input class="blue-btn" type="submit" value="Send message">
-                
+            </div>
+            
+            
+        </div>
+    </section>
+    
+    <section id="portofolio" class="portofolio-section">
+        <div class="section__header">
+            <h2 class="section__header-title" >NOS PROJETS</h2>
+            <div class="section__header-title-underline u-margin-y-md"><span class="dot"></span></div>
+            <p>Voici une partie de nos réalisations pour nos clients.</p>
+        </div>
+        
+        <div class="portofolio__projects-types">
+            <nav class="portofolio__projects-types-nav flex-align-center">
+                <button class="btn portofolio__projects-types-nav__selector --active" value="all">All Works</button>
+                <button class="btn portofolio__projects-types-nav__selector" value="creative">Creative</button>
+                <button class="btn portofolio__projects-types-nav__selector" value="corporate">Corporate</button>
+                <button class="btn portofolio__projects-types-nav__selector" value="portofolio">Portofolio</button>
+            </nav>
+        </div>
+        
+
+        <div class="wrapper wrap-quarter">
+            
+            <div class="portofolio__card" data-category="creative">
+                <a href="#" class="portofolio__card-frame">
+                    <img class="portofolio__card-image" src="assets/images/portfolio/01.jpg" alt="projet 1"/>
+                    <div class="portofolio__card-text">
+                        <h4>Optix</h4>
+                        <p>Opticien sur Paris.</p>
+                        <i class="portofolio__card-text__icon fa icon">&#xf06e;</i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portofolio__card" data-category="creative">
+                <a href="#" class="portofolio__card-frame">
+                    <img class="portofolio__card-image" src="assets/images/portfolio/02.jpg" alt="projet 2"/>
+                    <div class="portofolio__card-text">
+                        <h4>Bunny's</h4>
+                        <p>Prestataire en Evenementiel.</p>
+                        <i class="portofolio__card-text__icon fa icon">&#xf06e;</i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portofolio__card" data-category="corporate">
+                <a href="#" class="portofolio__card-frame">
+                    <img class="portofolio__card-image" src="assets/images/portfolio/03.jpg" alt="projet 3"/>
+                    <div class="portofolio__card-text">
+                        <h4>Original POMPADOUR</h4>
+                        <p>Marque de vetement.</p>
+                        <i class="portofolio__card-text__icon fa icon">&#xf06e;</i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portofolio__card" data-category="portofolio">
+                <a href="#" class="portofolio__card-frame">
+                    <img class="portofolio__card-image" src="assets/images/portfolio/04.jpg" alt="projet 4"/>
+                    <div class="portofolio__card-text">
+                        <h4>Builds</h4>
+                        <p>Architecte d'interieur.</p>
+                        <i class="portofolio__card-text__icon fa icon">&#xf06e;</i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portofolio__card" data-category="creative">
+                <a href="#" class="portofolio__card-frame">
+                    <img class="portofolio__card-image" src="assets/images/portfolio/05.jpg" alt="projet 5"/>
+                    <div class="portofolio__card-text">
+                        <h4>T-Shop</h4>
+                        <p>Magasin de pret a porter.</p>
+                        <i class="portofolio__card-text__icon fa icon">&#xf06e;</i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portofolio__card" data-category="portofolio">
+                <a href="#" class="portofolio__card-frame">
+                    <img class="portofolio__card-image" src="assets/images/portfolio/06.jpg" alt="projet 6"/>
+                    <div class="portofolio__card-text">
+                        <h4>tr-Vels</h4>
+                        <p>Agence de voyage.</p>
+                        <i class="portofolio__card-text__icon fa icon">&#xf06e;</i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portofolio__card" data-category="creative">
+                <a href="#" class="portofolio__card-frame">
+                    <img class="portofolio__card-image" src="assets/images/portfolio/07.jpg" alt="projet 7"/>
+                    <div class="portofolio__card-text">
+                        <h4>Propuls-R</h4>
+                        <p>Audit Entreprise.</p>
+                        <i class="portofolio__card-text__icon fa icon">&#xf06e;</i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portofolio__card" data-category="corporate">
+                <a href="#" class="portofolio__card-frame">
+                    <img class="portofolio__card-image" src="assets/images/portfolio/08.jpg" alt="projet 8"/>
+                    <div class="portofolio__card-text">
+                        <h4>BE Theme</h4>
+                        <p>Agence de communication.</p>
+                        <i class="portofolio__card-text__icon fa icon">&#xf06e;</i>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <footer  id="contact" class="footer">
+        <div class="footer__iframe">
+            <iframe class="footer__iframe__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2216085943573!2d2.3476369!3d48.8730518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1521394406082" width="800" height="600" style="border:0" allowtransparency="true" allowfullscreen></iframe>
+        </div>
+        
+        <form  class="footer__contact-form">
+            <div class="container-form">
+                <h3 class="footer__contact-form-title">Contact Info</h3>
+                <div class="footer__contact-form-text">
+                    <p><span class="bold-font">WebAgency SAS</span><br>
+                    25 Rue d'Hauteville 75010 Paris <br>
+                    Tel: 01 02 03 04 05</p>
+                </div>
+                <input type="text" placeholder="Name"><br>
+                <input type="text" placeholder="Email"><br>
+                <input type="text" placeholder="Subject"><br>
+                <textarea placeholder="Message"></textarea><br>
+                <input class="btn btn--blue" type="submit" value="Send Message">
             </div>
         </form>
         
-        <div class="background-shade">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2216085943573!2d2.3476369!3d48.8730518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1521394406082" width="800" height="600" style="border:0" allowtransparency="true" allowfullscreen></iframe>
-        </div>
-        
-        
-        
     </footer>
-    
+
 </body>
 </html>

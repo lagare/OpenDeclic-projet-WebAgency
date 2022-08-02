@@ -1,0 +1,8 @@
+.footer {
+    background-color: $color-white-2;
+
+    @include responsive(tab-land) {
+        padding-top: 0;
+    }
+
+}

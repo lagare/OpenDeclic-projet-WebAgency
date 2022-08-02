@@ -1,0 +1,30 @@
+.flex {
+    display: flex;
+
+    &-align-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-spaced-around {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &-spaced-between {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.u-margin-y-md {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.u-x-center-mg {
+    margin: 0 auto;
+}
