@@ -20,11 +20,11 @@
             background-size: cover;
 
             &:first-child {
-                background-image: url('../assets/images/slider/bg1.jpg');
+                background-image: url('./assets/images/slider/bg1.jpg');
             }
 
             &:last-child {
-                background-image: url('../assets/images/slider/bg2.jpg');
+                background-image: url('./assets/images/slider/bg2.jpg');
             }
         }
         
