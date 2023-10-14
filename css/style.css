@@ -427,10 +427,10 @@ h5 {
   background-size: cover;
 }
 .header__slider__slides__item:first-child {
-  background-image: url("../assets/images/slider/bg1.jpg");
+  background-image: url("./assets/images/slider/bg1.jpg");
 }
 .header__slider__slides__item:last-child {
-  background-image: url("../assets/images/slider/bg2.jpg");
+  background-image: url("./assets/images/slider/bg2.jpg");
 }
 .header__slider__panel {
   position: absolute;
